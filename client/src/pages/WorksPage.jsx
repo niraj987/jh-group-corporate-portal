@@ -149,20 +149,20 @@ export default function WorksPage() {
 
                   {/* Problem & Solution Breakdown */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                    <div className="p-4 rounded-2xl bg-black/40 border border-blue-500/20">
+                    <div className="p-4 rounded-2xl bg-slate-950/80 border border-blue-500/20">
                       <span className="text-xs font-bold text-blue-300 uppercase tracking-wider block mb-1.5">
                         Problem Tackled
                       </span>
-                      <p className="text-xs text-slate-300 leading-relaxed">
+                      <p className="text-xs text-slate-200 leading-relaxed">
                         {platform.problemTackled}
                       </p>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-black/40 border border-purple-500/20">
+                    <div className="p-4 rounded-2xl bg-slate-950/80 border border-purple-500/20">
                       <span className="text-xs font-bold text-purple-300 uppercase tracking-wider block mb-1.5">
                         How We Solved It
                       </span>
-                      <p className="text-xs text-slate-200 leading-relaxed">
+                      <p className="text-xs text-white leading-relaxed">
                         {platform.solutionProvided}
                       </p>
                     </div>
@@ -175,7 +175,7 @@ export default function WorksPage() {
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {platform.capabilities.map((cap, cIdx) => (
-                        <div key={cIdx} className="flex items-center gap-2 text-xs text-slate-300">
+                        <div key={cIdx} className="flex items-center gap-2 text-xs text-slate-100">
                           <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0" />
                           <span>{cap}</span>
                         </div>

@@ -209,7 +209,7 @@ export default function ThreeCanvas() {
     <div
       ref={mountRef}
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
-      style={{ opacity: 0.85 }}
+      style={{ opacity: 0.35 }}
     />
   );
 }

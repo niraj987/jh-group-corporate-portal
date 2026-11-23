@@ -72,7 +72,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-extrabold text-silver mt-2 tracking-tight">
                 From Quantitative Research to a Tri-Platform Production Ecosystem
               </h2>
-              <div className="mt-6 space-y-4 text-sm text-slate-300 leading-relaxed">
+              <div className="mt-6 space-y-4 text-sm text-slate-200 leading-relaxed">
                 <p>
                   JH Group originated from a straightforward observation: the financial services and fintech sectors were trapped between two extremes. On one side stood legacy systems that were slow, opaque, and manual; on the other stood ungrounded "black-box" AI systems that hallucinated and failed regulatory audits.
                 </p>
@@ -91,27 +91,27 @@ export default function AboutPage() {
                 The Triad of JH Group Competencies
               </h3>
               <div className="space-y-4">
-                <div className="p-4 rounded-2xl bg-black/40 border border-white/10 flex items-start gap-3">
+                <div className="p-4 rounded-2xl bg-slate-950/80 border border-white/10 flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-blue-400 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-sm font-bold text-white">Quantitative Asset Intelligence</h4>
-                    <p className="text-xs text-slate-300 mt-1">Real-time order book analysis, momentum extraction, and statistical signal filtering for volatile markets.</p>
+                    <p className="text-xs text-slate-200 mt-1">Real-time order book analysis, momentum extraction, and statistical signal filtering for volatile markets.</p>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-black/40 border border-white/10 flex items-start gap-3">
+                <div className="p-4 rounded-2xl bg-slate-950/80 border border-white/10 flex items-start gap-3">
                   <FileText className="w-5 h-5 text-purple-400 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-sm font-bold text-white">Multi-Agent Cognitive Reasoning</h4>
-                    <p className="text-xs text-slate-300 mt-1">Autonomous agent networks that read, debate, and verify complex corporate filings and earnings disclosures with zero hallucination.</p>
+                    <p className="text-xs text-slate-200 mt-1">Autonomous agent networks that read, debate, and verify complex corporate filings and earnings disclosures with zero hallucination.</p>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-black/40 border border-white/10 flex items-start gap-3">
+                <div className="p-4 rounded-2xl bg-slate-950/80 border border-white/10 flex items-start gap-3">
                   <ShieldCheck className="w-5 h-5 text-indigo-400 shrink-0 mt-1" />
                   <div>
                     <h4 className="text-sm font-bold text-white">Regulatory-Grade Risk Underwriting</h4>
-                    <p className="text-xs text-slate-300 mt-1">Strict adherence to Basel III/IV IRB frameworks with Explainable AI attribution for instant credit approval.</p>
+                    <p className="text-xs text-slate-200 mt-1">Strict adherence to Basel III/IV IRB frameworks with Explainable AI attribution for instant credit approval.</p>
                   </div>
                 </div>
               </div>

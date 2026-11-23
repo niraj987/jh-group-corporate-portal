@@ -194,21 +194,21 @@ export default function HomePage() {
                   </p>
 
                   {/* Problem & Solution Snippet */}
-                  <div className="space-y-3 mb-6 p-4 rounded-xl bg-black/30 border border-white/10 text-xs">
+                  <div className="space-y-3 mb-6 p-4 rounded-xl bg-slate-950/80 border border-white/10 text-xs">
                     <div>
                       <span className="font-bold text-blue-300">Problem: </span>
-                      <span className="text-slate-300">{platform.problemTackled}</span>
+                      <span className="text-slate-200">{platform.problemTackled}</span>
                     </div>
                     <div>
                       <span className="font-bold text-purple-300">Solution: </span>
-                      <span className="text-slate-200">{platform.solutionProvided}</span>
+                      <span className="text-white font-medium">{platform.solutionProvided}</span>
                     </div>
                   </div>
 
                   {/* Capabilities Checklist */}
                   <div className="space-y-2 mb-6">
                     {platform.capabilities.slice(0, 3).map((cap, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
+                      <div key={idx} className="flex items-start gap-2 text-xs text-slate-100">
                         <CheckCircle2 className="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5" />
                         <span>{cap}</span>
                       </div>

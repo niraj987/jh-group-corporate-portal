@@ -163,7 +163,7 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="text-xs font-semibold text-slate-300 block mb-2">
+                      <label className="text-xs font-semibold text-slate-200 block mb-2">
                         Full Name *
                       </label>
                       <input
@@ -172,12 +172,12 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Dr. Alexander Wright"
-                        className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-white/20 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-purple-400 transition-colors shadow-inner"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-semibold text-slate-300 block mb-2">
+                      <label className="text-xs font-semibold text-slate-200 block mb-2">
                         Corporate / Institutional Email *
                       </label>
                       <input
@@ -186,14 +186,14 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="alexander@capital-fund.com"
-                        className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-white/20 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-purple-400 transition-colors shadow-inner"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="text-xs font-semibold text-slate-300 block mb-2">
+                      <label className="text-xs font-semibold text-slate-200 block mb-2">
                         Organization / Fund Name
                       </label>
                       <input
@@ -201,18 +201,18 @@ export default function ContactPage() {
                         value={formData.organization}
                         onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                         placeholder="Apex Quantitative Capital"
-                        className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-white/20 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-purple-400 transition-colors shadow-inner"
                       />
                     </div>
 
                     <div>
-                      <label className="text-xs font-semibold text-slate-300 block mb-2">
+                      <label className="text-xs font-semibold text-slate-200 block mb-2">
                         Estimated Budget
                       </label>
                       <select
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-white/20 text-sm text-white focus:outline-none focus:border-purple-400 transition-colors"
                       >
                         <option value="Under $10k">Under $10k (Pilot Evaluation)</option>
                         <option value="$10k - $25k">$10k - $25k (Standard Module)</option>
@@ -224,13 +224,13 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="text-xs font-semibold text-slate-300 block mb-2">
+                    <label className="text-xs font-semibold text-slate-200 block mb-2">
                       Primary Area of Interest
                     </label>
                     <select
                       value={formData.serviceInterest}
                       onChange={(e) => setFormData({ ...formData, serviceInterest: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-white/20 text-sm text-white focus:outline-none focus:border-purple-400 transition-colors"
                     >
                       <option value="Quantitative Crypto Intelligence">JH Crypto Analytics (Quantitative Telemetry)</option>
                       <option value="Multi-Agent Financial AI (Earnings Desk)">Earnings Desk (Multi-Agent Equity Research)</option>
@@ -242,7 +242,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="text-xs font-semibold text-slate-300 block mb-2">
+                    <label className="text-xs font-semibold text-slate-200 block mb-2">
                       Project Objective / Problem Statement *
                     </label>
                     <textarea
@@ -251,7 +251,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Outline the financial data problem, model requirements, or specific challenges you want JH Group to tackle..."
-                      className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-white/20 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-purple-400 transition-colors resize-none shadow-inner"
                     />
                   </div>
 
