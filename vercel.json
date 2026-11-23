@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm --prefix client run build",
+  "outputDirectory": "client/dist",
+  "rewrites": [
+    { "source": "/api/contact", "destination": "/api/contact.js" },
+    { "source": "/api/ecosystem", "destination": "/api/ecosystem.js" },
+    { "source": "/api/metrics", "destination": "/api/metrics.js" },
+    { "source": "/api/quant/(.*)", "destination": "/api/quant.js" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}

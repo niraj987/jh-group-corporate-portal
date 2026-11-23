@@ -1,0 +1,24 @@
+{
+  "name": "jh-group-corporate-portal",
+  "version": "1.0.0",
+  "description": "JH Group - High-Performance Quantitative Intelligence & Multi-Agent FinTech Corporate Website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run start",
+    "python": "python python_service/app.py",
+    "build:client": "npm --prefix client run build",
+    "test:server": "node server/index.js"
+  },
+  "keywords": [
+    "quantitative-finance",
+    "crypto-analytics",
+    "multi-agent-systems",
+    "mern-stack",
+    "python",
+    "basel-iii"
+  ],
+  "author": "JH Group",
+  "license": "ISC"
+}
