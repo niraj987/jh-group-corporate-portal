@@ -28,72 +28,22 @@ export default function ThreeCanvas() {
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     currentMount.appendChild(renderer.domElement);
 
-    // --- 2. 3D Floating Geometry Models (Quantitative Financial Lattice) ---
-    // A. Central Multi-Faceted Icosahedron (Lattice Core)
-    const icosaGeometry = new THREE.IcosahedronGeometry(7, 1);
-    const icosaWireframe = new THREE.WireframeGeometry(icosaGeometry);
-    const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x8b5cf6, // Vibrant Royal Purple
-      transparent: true,
-      opacity: 0.35,
-      blending: THREE.AdditiveBlending
-    });
-    const icosahedronLines = new THREE.LineSegments(icosaWireframe, lineMaterial);
-    scene.add(icosahedronLines);
-
-    // B. Inner Quantum Core (Sapphire Blue)
-    const coreGeometry = new THREE.OctahedronGeometry(4, 0);
-    const coreMaterial = new THREE.MeshPhongMaterial({
-      color: 0x3b82f6, // Sapphire Blue
-      emissive: 0x1d4ed8,
-      emissiveIntensity: 0.4,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.5
-    });
-    const coreMesh = new THREE.Mesh(coreGeometry, coreMaterial);
-    scene.add(coreMesh);
-
-    // C. Orbiting Algorithmic Torus Rings (Silver & Cosmic Blue)
-    const torusGeometry = new THREE.TorusGeometry(12, 0.15, 16, 100);
-    const torusMaterial = new THREE.MeshBasicMaterial({
-      color: 0x93c5fd, // Light Silver-Blue
-      transparent: true,
-      opacity: 0.25,
-      wireframe: true
-    });
-    const torusRing1 = new THREE.Mesh(torusGeometry, torusMaterial);
-    torusRing1.rotation.x = Math.PI / 3;
-    torusRing1.rotation.y = Math.PI / 6;
-    scene.add(torusRing1);
-
-    const torusGeometry2 = new THREE.TorusGeometry(15, 0.1, 16, 120);
-    const torusMaterial2 = new THREE.MeshBasicMaterial({
-      color: 0xc084fc, // Soft Violet-Silver
-      transparent: true,
-      opacity: 0.2,
-      wireframe: true
-    });
-    const torusRing2 = new THREE.Mesh(torusGeometry2, torusMaterial2);
-    torusRing2.rotation.x = -Math.PI / 4;
-    scene.add(torusRing2);
-
-    // --- 3. 3D Constellation Particle Field ---
-    const particlesCount = 900;
+    // --- 2. Clean 3D Constellation Particle Field (Ring & Sphere models removed) ---
+    const particlesCount = 850;
     const posArray = new Float32Array(particlesCount * 3);
     const colorArray = new Float32Array(particlesCount * 3);
 
-    // Color gradient across particles: Silver, Blue, Purple
+    // Harmonious Color Palette: Metallic Silver, Sapphire Blue, Amethyst Purple
     const colorPalette = [
-      new THREE.Color(0xe2e8f0), // Metallic Silver
-      new THREE.Color(0x38bdf8), // Light Blue
+      new THREE.Color(0xf1f5f9), // Metallic Platinum Silver
+      new THREE.Color(0x60a5fa), // Sapphire Light Blue
       new THREE.Color(0x818cf8), // Indigo
       new THREE.Color(0xc084fc)  // Amethyst Purple
     ];
 
     for (let i = 0; i < particlesCount; i++) {
-      posArray[i * 3] = (Math.random() - 0.5) * 80;
-      posArray[i * 3 + 1] = (Math.random() - 0.5) * 80;
+      posArray[i * 3] = (Math.random() - 0.5) * 85;
+      posArray[i * 3 + 1] = (Math.random() - 0.5) * 85;
       posArray[i * 3 + 2] = (Math.random() - 0.5) * 60;
 
       const c = colorPalette[Math.floor(Math.random() * colorPalette.length)];
@@ -110,26 +60,18 @@ export default function ThreeCanvas() {
       size: 0.22,
       vertexColors: true,
       transparent: true,
-      opacity: 0.75,
+      opacity: 0.7,
       blending: THREE.AdditiveBlending
     });
 
     const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
     scene.add(particlesMesh);
 
-    // --- 4. Lights ---
-    const ambientLight = new THREE.AmbientLight(0x4338ca, 1.2);
+    // --- 3. Ambient Lighting ---
+    const ambientLight = new THREE.AmbientLight(0x4338ca, 0.8);
     scene.add(ambientLight);
 
-    const pointLight1 = new THREE.PointLight(0xa855f7, 2.5, 60);
-    pointLight1.position.set(15, 12, 10);
-    scene.add(pointLight1);
-
-    const pointLight2 = new THREE.PointLight(0x3b82f6, 2.5, 60);
-    pointLight2.position.set(-15, -12, 10);
-    scene.add(pointLight2);
-
-    // --- 5. Interactive Mouse & Scroll Parallax ---
+    // --- 4. Interactive Mouse & Scroll Parallax ---
     let mouseX = 0;
     let mouseY = 0;
     let targetX = 0;
@@ -142,7 +84,7 @@ export default function ThreeCanvas() {
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
-    // --- 6. Responsive Window Resize ---
+    // --- 5. Responsive Resize ---
     const handleResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
@@ -151,7 +93,7 @@ export default function ThreeCanvas() {
 
     window.addEventListener('resize', handleResize);
 
-    // --- 7. Animation Loop ---
+    // --- 6. Animation Loop ---
     let animationFrameId;
     let clock = new THREE.Clock();
 
@@ -160,29 +102,16 @@ export default function ThreeCanvas() {
       const elapsedTime = clock.getElapsedTime();
 
       // Smooth mouse interpolation
-      targetX += (mouseX - targetX) * 0.05;
-      targetY += (mouseY - targetY) * 0.05;
-
-      // Rotate geometric models
-      icosahedronLines.rotation.x = elapsedTime * 0.08 + targetY * 0.4;
-      icosahedronLines.rotation.y = elapsedTime * 0.12 + targetX * 0.4;
-
-      coreMesh.rotation.x = -elapsedTime * 0.15;
-      coreMesh.rotation.z = elapsedTime * 0.18;
-
-      torusRing1.rotation.z = elapsedTime * 0.05;
-      torusRing1.rotation.y = elapsedTime * 0.07 + targetX * 0.2;
-
-      torusRing2.rotation.z = -elapsedTime * 0.04;
-      torusRing2.rotation.x = -elapsedTime * 0.06 + targetY * 0.2;
+      targetX += (mouseX - targetX) * 0.04;
+      targetY += (mouseY - targetY) * 0.04;
 
       // Gently rotate particle starfield
-      particlesMesh.rotation.y = elapsedTime * 0.02;
+      particlesMesh.rotation.y = elapsedTime * 0.015 + targetX * 0.15;
       particlesMesh.rotation.x = targetY * 0.1;
 
       // Parallax camera sway
-      camera.position.x = targetX * 2.5;
-      camera.position.y = -targetY * 2.5;
+      camera.position.x = targetX * 2.0;
+      camera.position.y = -targetY * 2.0;
       camera.lookAt(scene.position);
 
       renderer.render(scene, camera);
@@ -198,10 +127,8 @@ export default function ThreeCanvas() {
         currentMount.removeChild(renderer.domElement);
       }
       renderer.dispose();
-      icosaGeometry.dispose();
-      torusGeometry.dispose();
-      torusGeometry2.dispose();
       particlesGeometry.dispose();
+      particlesMaterial.dispose();
     };
   }, []);
 
@@ -209,7 +136,7 @@ export default function ThreeCanvas() {
     <div
       ref={mountRef}
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
-      style={{ opacity: 0.35 }}
+      style={{ opacity: 0.45 }}
     />
   );
 }
