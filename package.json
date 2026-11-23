@@ -5,6 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "npm --prefix client install && npm --prefix client run build",
     "client": "npm --prefix client run dev",
     "server": "npm --prefix server run start",
     "python": "python python_service/app.py",
